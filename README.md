@@ -9,4 +9,6 @@ Face Detecting Bot.
 
 4.You must add your own API key in the src/App.js file to connect to Clarifai.
 
+5.For API do the same.
+
 You can grab Clarifai API key [here](https://www.clarifai.com/)
