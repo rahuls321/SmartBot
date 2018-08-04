@@ -102,7 +102,7 @@ class App extends Component {
                 id: this.state.user.id
               })
             })
-              .then(response => response.json())
+              .then(response => console.log(response))
               .then(count => {
                 this.setState(Object.assign(this.state.user, {entries: count}))
             })
@@ -128,9 +128,9 @@ class App extends Component {
       <Particles className='particles'
           params = {particleOptions }
         />
-        <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>{
-          route === 'home'
-          ? <div>
+        {/* <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>{
+          route === 'home' ? */}
+           <div>
               <Logo />
               <Rank name={this.state.user.name} entries={this.state.user.entries}/>
               <ImageLinkForm
@@ -140,13 +140,13 @@ class App extends Component {
               <FaceRecoginition box={box} imageUrl={imageUrl}/>
             </div>
 
-          : (
+          {/* : (
               route === 'signin'
               ? <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
               : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
           )
 
-        }
+        } */}
       </div>
     );
   }
